@@ -89,11 +89,20 @@ this will checkout the release branch (make sure to git hf update first)
 - put the Aha! Ticket # in PR title with a description
 - assign to the proper reviewer
 - don't squash the commits until after reviewed
-- after review - squash the commits ( optional, we skip this step currently )
+- after review - squash the commits ( only for reviewer merge PR)
 
 ## Git Hubflow Workflow (Adv):
 
-### Squashing Commits:
+#### Github Squash and merge (Pref):
+
+https://help.github.com/en/articles/about-pull-request-merges
+
+https://help.github.com/en/articles/merging-a-pull-request
+
+
+
+#### Manual squashing commits (optinal):
+
 - checkout the branch you want to squash
 - git merge-base "my-branch" develop (returns merge-base-hash)
 - git rebase -i "merge-base-hash"
@@ -111,3 +120,6 @@ Resolving merge conflicts with the develop branch that are not squashing related
 ##### Rules to remember:
 - don't ever git merge branches together manually (should never run command - git merge)
 - squash only after review and before merging PR into develop
+
+
+
