@@ -26,6 +26,8 @@ https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/git-hubflow
 
 this will update master and develop and sync remote branches with local ones (be sure not to put commits into develop or master as it will push these up)
 
+### GIT HF UPDATE FIRST BEFORE ANY OPERATION!!!
+
 ##### git hf push
 
 this will push your commits in your local branch to the matching remote branch
@@ -54,11 +56,11 @@ this will checkout the feature branch
 ### Hotfix Branch:
 ##### git hf hotfix start "release-version" 
 
-this will create a hotfix branch on origin and local will be based off the latest develop branch (make sure to git hf update before or you get an error if local develop and remote devleop have divereged)
+this will create a hotfix branch on origin and local will be based off the latest master branch (make sure to git hf update before or you get an error if local master and remote master have divereged)
 
 ##### git hf hotfix finish "release-version"
 
- this will delete the local and remote branches and merge the commits of the hotfix branch into master and develop branches - it will also create a release tag that matches the release version on master
+ this will delete the local and remote branches and merge the commits of the hotfix branch into master and develop branches - it will also create a release tag that matches the release version on master.
 
 ##### git hf hotfix cancel -f "release-version"
 
